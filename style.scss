@@ -1,0 +1,76 @@
+@import "scss/company-colors";
+@import "scss/fonts";
+@import "scss/mixins";
+
+
+.center-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: $background;
+    font-family: "FredokaOne";
+}
+header{
+    @extend .center-all;
+    justify-content: space-between !important;
+    padding: 0px 64px;
+    nav {
+        display: flex;
+        align-items: center;}
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-left: 32px;
+    &:hover {
+        color: $main-color;}
+}
+h1 {
+    color: $main-color;
+    font-family: 'Pacifico';
+    text-align: center;
+}
+.button{
+    background-color: white;
+    border:unset;
+    height: 48px;
+    padding: 0px 16px;
+    border-radius: 32px;
+    min-width: 150px;
+    font-family: inherit;
+    border: none;
+    @extend .center-all;
+    &:hover{
+        filter: brightness(1.2);
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+}  
+.button-main{
+    @extend .button;
+    background-color: $main-color;
+    color: white !important;
+}
+.main-text {
+    color: white;
+    left: 64px;
+    position: absolute;
+    top: 20vh;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.main-color{
+    color: $main-color;
+}
+.row{
+    display: flex;
+    gap: 16px;
+}
+.gbi {
+    width: 40vw;
+    @include rightCorner();
+}
+.circle {
+    @include rightCorner();
+    @include circle(40vw, $main-color);
+}
